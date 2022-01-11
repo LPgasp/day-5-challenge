@@ -1,0 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.font-small {
+  font-size: 0.5rem;
+  display: block;
+}
+
+.font-medium {
+  font-size: 0.7rem;
+  display: block;
+  font-weight: 700;
+}
+
+.container {
+  background-color: rgb(228, 189, 195);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-box {
+  position: relative;
+  width: 250px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.3);
+  font-size: 62, 5%;
+  color: #dc143c;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #0a1128;
+  border-radius: 0.2rem 0.2rem 0 0;
+  color: #ffffff;
+}
+
+.card-period {
+  margin-left: 10px;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.card-period .font-medium {
+  text-transform: uppercase;
+}
+
+.card-status {
+  margin-right: 10px;
+  text-align: end;
+  margin-bottom: 10px;
+}
+
+.card-legend {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.6rem;
+  margin-right: 5px;
+  margin-top: 5px;
+  color: #0a1128;
+  font-weight: 700;
+}
+
+.views {
+  margin-right: 30px;
+  position: relative;
+}
+
+.views span {
+  position: absolute;
+  top: 3px;
+  right: 30px;
+  display: block;
+  height: 5px;
+  width: 15px;
+  background-color: darkblue;
+}
+
+.purchases {
+  position: relative;
+}
+
+.purchases span {
+  position: absolute;
+  top: 3px;
+  right: 45px;
+  display: block;
+  height: 5px;
+  width: 15px;
+  background-color: darkred;
+}
+
+ul.week {
+  position: absolute;
+  top: 170px;
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+}
+
+.primary-item {
+  margin-left: 5px;
+}
+
+.end-item {
+  margin-right: 5px;
+}
+
+.list-item {
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+
+.line {
+  position: absolute;
+  bottom: 75px;
+  opacity: 0.3;
+  height: 1px;
+  width: 100%;
+  background-color: #dc143c;
+}
+
+.line::after,
+.line::before {
+  content: '';
+  position: absolute;
+  opacity: 0.5;
+  height: 1px;
+  width: 100%;
+  background-color: #dc143c;
+}
+
+.line::after {
+  top: 35px;
+}
+
+.line::before {
+  bottom: 35px;
+}
+
+.line-1-graphic {
+  position: absolute;
+  top: 80px;
+  left: 5px;
+  width: 240px;
+  height: 40px;
+  z-index: 10;
+}
+
+.line-2-graphic {
+  position: absolute;
+  top: 120px;
+  left: 5px;
+  width: 240px;
+  height: 40px;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+
+.circle-result {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: darkred;
+  position: absolute;
+}
+
+.circle-result .box-result {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 3px;
+  text-align: center;
+  position: absolute;
+  top: -12px;
+  left: -5px;
+  width: 20px;
+  height: 15px;
+  border-radius: 2px 2px 0 0;
+  background-color: #dc143c;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.box-result span {
+  position: absolute;
+  top: 15px;
+  display: block;
+  border-top: 10px solid #dc143c;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.circle-result:hover .box-result {
+  transform: translateY(-10px);
+  box-shadow: 0 0 2px 0 #0a1128;
+  visibility: visible;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.line-1-graphic .line-day-1,
+.line-1-graphic .line-day-2,
+.line-1-graphic .line-day-3,
+.line-1-graphic .line-day-4,
+.line-1-graphic .line-day-5,
+.line-1-graphic .line-day-6,
+.line-1-graphic .line-day-0 {
+  background-color: darkred;
+}
+
+/* DAY 1 LINE */
+
+.line-day-1 {
+  position: absolute;
+  top: 20px;
+  width: 50px;
+  height: 2px;
+  transform: rotate(335deg);
+}
+
+.day-1 .circle-result {
+  top: 4px;
+  left: 45px;
+}
+
+/* DAY 2 LINE */
+
+.line-day-2 {
+  position: absolute;
+  top: 18px;
+  left: 45px;
+  width: 45px;
+  height: 2px;
+  transform: rotate(30deg);
+}
+
+.day-2 .circle-result {
+  top: 25px;
+  left: 82px;
+}
+
+/* DAY 3 LINE */
+
+.line-day-3 {
+  position: absolute;
+  top: 25px;
+  left: 85px;
+  width: 40px;
+  height: 2px;
+  transform: rotate(350deg);
+}
+
+.day-3 .circle-result {
+  top: 17.5px;
+  left: 118px;
+}
+
+/* DAY 4 LINE */
+
+.line-day-4 {
+  position: absolute;
+  top: 26px;
+  left: 124px;
+  width: 40px;
+  height: 2px;
+  transform: rotate(14deg);
+}
+
+.day-4 .circle-result {
+  top: 26px;
+  left: 154px;
+}
+
+/* DAY 5 LINE */
+
+.line-day-5 {
+  position: absolute;
+  top: 22px;
+  left: 154px;
+  width: 40px;
+  height: 2px;
+  transform: rotate(330deg);
+}
+
+.day-5 .circle-result {
+  top: 10px;
+  left: 184px;
+}
+
+/* DAY 6 LINE */
+
+.line-day-6 {
+  position: absolute;
+  top: 10px;
+  left: 190px;
+  width: 40px;
+  height: 2px;
+  background-color: red;
+  transform: rotate(350deg);
+}
+
+.day-6 .circle-result {
+  top: 3px;
+  left: 225px;
+}
+
+/* DAY 7 LINE */
+
+.line-day-0 {
+  position: absolute;
+  top: 10px;
+  left: 190px;
+  width: 40px;
+  height: 2px;
+  background-color: red;
+  transform: rotate(350deg);
+}
+
+.day-0 .circle-result {
+  top: 25.5px;
+  left: 0px;
+}
+
+/* --------- */
+.line-2-graphic .line-day-1,
+.line-2-graphic .line-day-2,
+.line-2-graphic .line-day-3,
+.line-2-graphic .line-day-4,
+.line-2-graphic .line-day-5,
+.line-2-graphic .line-day-6,
+.line-2-graphic .line-day-0 {
+  background-color: darkblue;
+}
+
+.line-2-graphic .circle-result {
+  background-color: darkblue;
+  transform: rotate(180deg);
+}
